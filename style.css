@@ -8,7 +8,12 @@
 
 /* Body */
 body {
-    background-color: #f4f7f9;
+    background-image: url("eee.jpg"); /* ← THAY ẢNH TẠI ĐÂY */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+
     color: #333;
     line-height: 1.6;
     animation: fadeIn 1s ease-in;
@@ -209,4 +214,23 @@ footer {
 .card a:hover {
     background-color: #6a11cb;
     transform: translateY(-3px) scale(1.05);
+}
+
+/* Animation slide-in bảng lương */
+.salary-table-section {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: slideInSalary 1s ease-out forwards;
+}
+
+/* Keyframes bảng lương */
+@keyframes slideInSalary {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
